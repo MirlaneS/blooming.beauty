@@ -1,0 +1,286 @@
+/****************************
+ * Folhas de estilo do site *
+ ****************************/
+
+/*
+    Para saber mais, estude e faça os exemplos do site de referência
+    https://www.w3schools.com/css/
+*/
+
+/***************
+ * Reset geral *
+ ***************/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Reset dos elementos "root" (raiz) */
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Fonte padrão do site */
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão → 1rem */
+    font-size: 16px;
+
+    /* Cor da fonte padrão */
+    color: rgb(73, 3, 24);
+}
+
+/* Reset dos links */
+a {
+    color: rgb(136, 151, 163);
+    text-decoration: none;
+}
+
+/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
+a:hover {
+    color: rgb(255, 69, 0);
+    text-decoration: underline;
+}
+
+/* Reset dos elementos semânticos de bloco */
+header, nav, main, article, aside, footer {
+    display: block;
+}
+
+/* Fundo da página */
+body {
+    background-attachment: fixed;
+    background-color: rgb(255, 69, 0);
+    background-image: url('/img/bg02.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* wrap */
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 280px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+/*************
+ * Cabeçalho *
+ *************/
+
+#wrap>header {
+    /* border: 1px solid purple; */
+    border-radius: .5rem;
+    margin: .5rem;
+    background-attachment: fixed;
+    background-color: rgb(8, 97, 38);
+    background-image: url('/img/bg03.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#wrap>header a {
+    display: block;
+    font-size: 4rem;
+    color: rgb(8, 97, 38);
+    padding: .5rem 1rem .5rem .5rem;
+
+    /* Experimental → Aplica borda ao texto */
+    -webkit-text-stroke: 2px rgb(232, 201, 232);
+}
+
+#wrap>header h1 {
+    margin: 0;
+    font-size: 1.45rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#wrap>header small {
+    display: block;
+    font-size: .94rem;
+    font-weight: normal;
+}
+
+/******************
+ * Menu principal *
+ ******************/
+
+#wrap>nav {
+    background-color: rgb(8, 97, 38);
+    border-radius: .5rem;
+    margin: .5rem;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#wrap>nav a {
+    padding: .5rem .7rem;
+    text-align: center;
+    color: rgb(255, 240, 255);
+    text-decoration: none;
+    transition: .25s;
+}
+
+#wrap>nav a:hover {
+    /* background-color: rgb(255, 240, 255); */
+    color: rgb(250, 249, 167);
+}
+
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .3rem;
+}
+
+/* Menu principal responsivo */
+@media screen and (min-width: 480px) {
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+
+}
+
+/************
+ * Conteúdo *
+ ************/
+
+#wrap>main {
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap>main article, #wrap>main aside {
+    background-color: white;
+    border-radius: .5rem;
+    overflow: auto;
+    margin: 0 .5rem;
+    padding: 0 1rem;
+}
+
+#wrap>main aside {
+    margin: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    #wrap>main {
+        flex-direction: row;
+    }
+
+    #wrap>main article {
+        flex-grow: 1;
+        margin-bottom: .5rem;
+    }
+
+    #wrap>main aside {
+        margin: 0 .5rem 0 0;
+        min-width: 220px;
+        max-width: 220px;
+        margin-bottom: .5rem;
+    }
+}
+
+/**********
+ * Rodapé *
+ **********/
+
+#wrap>footer {
+    background-color: rgb(8, 105, 37);
+    border-radius: .5rem;
+    margin: .5rem;
+    margin-top: 0;
+    color: rgb(255, 240, 255);
+}
+
+#fsup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgb(199, 196, 12);
+}
+
+#fsup a {
+    padding: .5rem;
+    text-align: center;
+    color: rgb(255, 240, 255);
+    text-decoration: none;
+    transition: .25s;
+    font-size: 1.5rem;
+}
+
+#fsup a:hover {
+    color: rgb(199, 196, 12);
+}
+
+#finf {
+    display: flex;
+    padding: .5rem;
+    justify-content: space-between;
+}
+
+#finf h4 {
+    margin: 0 0 .7rem 0;
+    font-weight: normal;
+}
+
+#finf nav a {
+    display: block;
+    padding: .3rem 0;
+    font-size: .9rem;
+    color: rgb(250, 255, 240);
+}
+
+#finf nav a:hover {
+    color: rgb(199, 196, 12);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 426px) {
+
+    #finf {
+        justify-content: space-around;
+    }
+
+}
+
+/* Sticky Footer */
+#wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap>main {
+    flex-grow: 1;
+}
+
+#wrap>main article {
+    flex-grow: 1;
+}
+
+#wrap>span {
+    font-size: 1px;
+}

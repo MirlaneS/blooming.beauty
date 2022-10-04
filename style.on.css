@@ -132,7 +132,7 @@ body {
 /* Título */
 #wrap>header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -142,7 +142,7 @@ body {
   display: block;
   font-size: 1rem;
   font-weight: normal;
-  letter-spacing: .37rem;
+  letter-spacing: .33rem;
 }
 
 /******************
@@ -159,7 +159,7 @@ body {
   align-items: center;
 
   /* Alinha itens do menu à esquerda */
-  justify-content: flex-end;
+  /* justify-content: flex-start; */
 }
 
 /* Itens do menu */
